@@ -211,7 +211,7 @@
             color: white;
         }
 
-        /* Carousel & Meaning */
+        /* Carousel & Sections Spacing */
         .carousel-container {
             width: 100%;
             overflow: hidden;
@@ -239,13 +239,22 @@
             100% { transform: translateX(-50%); }
         }
 
+        /* REVISI MARGIN: Bagian Makna & Lirik */
+        #meaning {
+            padding-bottom: 0; /* Menghilangkan padding bawah */
+        }
+
         .meaning-content {
             max-width: 700px;
             text-align: left;
             padding: 30px;
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            margin-bottom: 40px;
+            margin-bottom: 0px; /* Menghilangkan margin bawah */
+        }
+
+        #lyrics {
+            padding-top: 20px; /* Mengecilkan padding atas lirik */
         }
 
         .meaning-content h3 {
@@ -259,6 +268,54 @@
             color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 15px;
+        }
+
+        /* LYRICS STYLE */
+        .lyrics-container {
+            max-width: 700px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px 20px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .lyrics-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        .lyrics-credit {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        .lyrics-text {
+            font-size: 0.95rem;
+            line-height: 2;
+            color: var(--text-secondary);
+            white-space: pre-line;
+        }
+
+        .lyrics-section-label {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.6rem;
+            color: white;
+            margin: 30px 0 10px 0;
+            display: block;
+            letter-spacing: 3px;
+            opacity: 0.6;
+        }
+
+        .chorus-style {
+            color: white;
+            font-weight: 700;
+            font-style: italic;
         }
 
         footer {
@@ -285,7 +342,7 @@
 
     <nav>
         <div class="logo">REPETISI</div>
-        <div class="year"></div>
+        <div class="year">2026</div>
     </nav>
 
     <section id="hero">
@@ -302,99 +359,14 @@
                  Spotify (SOON)
             </a>
 
-            <!-- PLAYER 1: DEMO TRACK -->
-            <div class="player-wrapper" style="border-color: rgba(255,255,255,0.3);">
-                <span class="member-label" style="color:white"><b>MAIN TRACK</b></span>
-                <audio class="audio-element" src="Demo STTM.wav"></audio>
-                <div class="player-controls">
-                    <button class="play-btn">
-                        <svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg>
-                        <svg class="pause-icon" style="display:none;" width="16" height="16" viewBox="0 0 24 24" fill="black"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                    </button>
-                    <div class="progress-container">
-                        <div class="progress-bar"></div>
-                    </div>
-                </div>
-                <div class="time-display">
-                    <span class="curr-time">00:00</span>
-                    <span style="letter-spacing: 2px;"><b>LISTEN DEMO</b></span>
-                    <span class="dur-time">00:00</span>
-                </div>
-            </div>
-
+            <!-- PLAYERS -->
+            <div class="player-wrapper" style="border-color: rgba(255,255,255,0.3);"><span class="member-label" style="color:white"><b>MAIN TRACK</b></span><audio class="audio-element" src="Demo STTM.wav"></audio><div class="player-controls"><button class="play-btn"><svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg><svg class="pause-icon" style="display:none;" width="16" height="16" viewBox="0 0 24 24" fill="black"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button><div class="progress-container"><div class="progress-bar"></div></div></div><div class="time-display"><span class="curr-time">00:00</span><span style="letter-spacing: 2px;"><b>LISTEN DEMO</b></span><span class="dur-time">00:00</span></div></div>
             <div class="member-section-title"><b>MEMBER MESSAGES</b></div>
-
-            <!-- MEMBER PLAYERS (5 BUAH) -->
-            <!-- Member 1 -->
-            <div class="player-wrapper">
-                <span class="member-label"><b>VOKALIS</b></span>
-                <audio class="audio-element" src="member1.mp3"></audio>
-                <div class="player-controls">
-                    <button class="play-btn">
-                        <svg class="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg>
-                        <svg class="pause-icon" style="display:none;" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                    </button>
-                    <div class="progress-container"><div class="progress-bar"></div></div>
-                </div>
-                <div class="time-display"><span class="curr-time">00:00</span><span><b>HUGET</b></span><span class="dur-time">00:00</span></div>
-            </div>
-
-            <!-- Member 2 -->
-            <div class="player-wrapper">
-                <span class="member-label"><b>BASSIST</b></span>
-                <audio class="audio-element" src="member2.mp3"></audio>
-                <div class="player-controls">
-                    <button class="play-btn">
-                        <svg class="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg>
-                        <svg class="pause-icon" style="display:none;" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                    </button>
-                    <div class="progress-container"><div class="progress-bar"></div></div>
-                </div>
-                <div class="time-display"><span class="curr-time">00:00</span><span><b>DAFFA</b></span><span class="dur-time">00:00</span></div>
-            </div>
-
-            <!-- Member 3 -->
-            <div class="player-wrapper">
-                <span class="member-label"><b>GITARIS 1</b></span>
-                <audio class="audio-element" src="member3.mp3"></audio>
-                <div class="player-controls">
-                    <button class="play-btn">
-                        <svg class="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg>
-                        <svg class="pause-icon" style="display:none;" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                    </button>
-                    <div class="progress-container"><div class="progress-bar"></div></div>
-                </div>
-                <div class="time-display"><span class="curr-time">00:00</span><span><b>ACIL</b></span><span class="dur-time">00:00</span></div>
-            </div>
-
-            <!-- Member 4 -->
-            <div class="player-wrapper">
-                <span class="member-label"><b>GITARIS 2</b></span>
-                <audio class="audio-element" src="member4.mp3"></audio>
-                <div class="player-controls">
-                    <button class="play-btn">
-                        <svg class="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg>
-                        <svg class="pause-icon" style="display:none;" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                    </button>
-                    <div class="progress-container"><div class="progress-bar"></div></div>
-                </div>
-                <div class="time-display"><span class="curr-time">00:00</span><span><b>AMAR</b></span><span class="dur-time">00:00</span></div>
-            </div>
-
-            <!-- Member 5 -->
-            <div class="player-wrapper">
-                <span class="member-label"><b>DRUMMER</b></span>
-                <audio class="audio-element" src="member5.mp3"></audio>
-                <div class="player-controls">
-                    <button class="play-btn">
-                        <svg class="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg>
-                        <svg class="pause-icon" style="display:none;" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                    </button>
-                    <div class="progress-container"><div class="progress-bar"></div></div>
-                </div>
-                <div class="time-display"><span class="curr-time">00:00</span><span><b>FADIL</b></span><span class="dur-time">00:00</span></div>
-            </div>
-
+            <div class="player-wrapper"><span class="member-label"><b>VOKALIS</b></span><audio class="audio-element" src="member1.mp3"></audio><div class="player-controls"><button class="play-btn"><svg class="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg><svg class="pause-icon" style="display:none;" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button><div class="progress-container"><div class="progress-bar"></div></div></div><div class="time-display"><span class="curr-time">00:00</span><span><b>HUGET</b></span><span class="dur-time">00:00</span></div></div>
+            <div class="player-wrapper"><span class="member-label"><b>BASSIST</b></span><audio class="audio-element" src="member2.mp3"></audio><div class="player-controls"><button class="play-btn"><svg class="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg><svg class="pause-icon" style="display:none;" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button><div class="progress-container"><div class="progress-bar"></div></div></div><div class="time-display"><span class="curr-time">00:00</span><span><b>DAFFA</b></span><span class="dur-time">00:00</span></div></div>
+            <div class="player-wrapper"><span class="member-label"><b>GITARIS 1</b></span><audio class="audio-element" src="member3.mp3"></audio><div class="player-controls"><button class="play-btn"><svg class="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg><svg class="pause-icon" style="display:none;" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button><div class="progress-container"><div class="progress-bar"></div></div></div><div class="time-display"><span class="curr-time">00:00</span><span><b>ACIL</b></span><span class="dur-time">00:00</span></div></div>
+            <div class="player-wrapper"><span class="member-label"><b>GITARIS 2</b></span><audio class="audio-element" src="member4.mp3"></audio><div class="player-controls"><button class="play-btn"><svg class="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg><svg class="pause-icon" style="display:none;" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button><div class="progress-container"><div class="progress-bar"></div></div></div><div class="time-display"><span class="curr-time">00:00</span><span><b>AMAR</b></span><span class="dur-time">00:00</span></div></div>
+            <div class="player-wrapper"><span class="member-label"><b>DRUMMER</b></span><audio class="audio-element" src="member5.mp3"></audio><div class="player-controls"><button class="play-btn"><svg class="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg><svg class="pause-icon" style="display:none;" width="14" height="14" viewBox="0 0 24 24" fill="black"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button><div class="progress-container"><div class="progress-bar"></div></div></div><div class="time-display"><span class="curr-time">00:00</span><span><b>FADIL</b></span><span class="dur-time">00:00</span></div></div>
         </div>
     </section>
 
@@ -408,6 +380,7 @@
         </div>
     </div>
 
+    <!-- SECTION MAKNA LAGU -->
     <section id="meaning">
         <div class="meaning-content">
           <h3>MAKNA LAGU</h3>
@@ -417,14 +390,85 @@
         </div>
     </section>
 
+    <!-- SECTION LIRIK -->
+    <section id="lyrics">
+        <div class="lyrics-container">
+            <h2 class="lyrics-title">LIRIK</h2>
+            <p class="lyrics-credit">Cipt. Teguh</p>
+            
+            <div class="lyrics-text">
+                <span class="lyrics-section-label">[ Verse 1 ]</span>
+                Cinta, Kau bilang aku sudah gila~
+                Sirna, Terenggut semua karenanya~
+                Dan kaupun berdalih, memegang kendali
+                peluru yang takkan pernah bisa ku hindari
+
+                <span class="lyrics-section-label">[ Verse 2 ]</span>
+                Nista, Kau yang ku cinta sedunia~
+                Fana, Manismu yang ternyata durjana~
+                Disaat terlambat, hanya serapah yang terus
+                menerus kau jejali dan ku dimaki
+
+                <span class="lyrics-section-label">[ Pre Chorus ]</span>
+                Kan ku basuh segala noda, yang kau tinggali
+                Semoga kau kan baik saja, atau mungkin masuk neraka
+
+                <span class="lyrics-section-label">[ Chorus ]</span>
+                <span class="chorus-style">
+                Semoga Tuhan tak mengampuni mu
+                Betapa hancurnya aku karenamu
+                Biar waktu yang akan
+                Membalas semua dusta oh oh ooh
+                </span>
+
+                <span class="lyrics-section-label">[ Verse 3 ]</span>
+                Luka, tak lagi mampu ku sembunyikan~
+                Rasa, kian perih dan tak terucapkan~
+                Kau pergi membawa sisa akal sehatku
+                dan meninggalkan bayangmu dalam hidupku
+
+                <span class="lyrics-section-label">[ Pre Chorus 2 ]</span>
+                Kan ku kubur semua cerita, yang kau beri
+                Meski bayangmu masih saja, datang tuk hantui diri
+
+                <span class="lyrics-section-label">[ Chorus 2 ]</span>
+                <span class="chorus-style">
+                Semoga Tuhan tak mengampuni mu
+                Betapa hancurnya aku karenamu
+                Biar waktu yang akan
+                Membalas semua dusta 
+
+                Semoga Tuhan tak mengampuni mu
+                Lihatlah ku tertatih karenamu
+                Pasti waktu pun kelak
+                Membalas semua luka oh oh ooh
+                </span>
+
+                <span class="lyrics-section-label">[ Bridge ]</span>
+                Semoga Tuhan tak mengampuni mu
+                Betapa hancurnya aku karenamu
+                Biar waktu yang akan
+                Membalas semua dusta
+
+                <span class="lyrics-section-label">[ Final Chorus ]</span>
+                <span class="chorus-style">
+                Semoga Tuhan tak mengampuni mu
+                Lihatlah ku tertatih karenamu
+                Pasti waktu pun kelak
+                Membalas semua luka oh oh ooh.
+                </span>
+            </div>
+        </div>
+    </section>
+
     <footer>&copy; 2026 REPETISI.</footer>
 
     <script>
-        // MUSIC PLAYER LOGIC FOR ALL PLAYERS
+        // MUSIC PLAYER LOGIC
         const players = document.querySelectorAll('.player-wrapper');
         const allAudios = document.querySelectorAll('.audio-element');
 
-        players.forEach((player, index) => {
+        players.forEach((player) => {
             const audio = player.querySelector('.audio-element');
             const btn = player.querySelector('.play-btn');
             const playIcon = player.querySelector('.play-icon');
@@ -434,18 +478,14 @@
             const currTimeTxt = player.querySelector('.curr-time');
             const durTimeTxt = player.querySelector('.dur-time');
 
-            // Play/Pause Click
             btn.addEventListener('click', () => {
                 if (audio.paused) {
-                    // Stop all other audios first
                     allAudios.forEach(a => {
                         a.pause();
-                        // Reset all icons to play
                         const p = a.closest('.player-wrapper');
                         p.querySelector('.play-icon').style.display = 'block';
                         p.querySelector('.pause-icon').style.display = 'none';
                     });
-
                     audio.play();
                     playIcon.style.display = 'none';
                     pauseIcon.style.display = 'block';
@@ -456,7 +496,6 @@
                 }
             });
 
-            // Update Progress & Time
             audio.addEventListener('timeupdate', () => {
                 const percent = (audio.currentTime / audio.duration) * 100;
                 progBar.style.width = `${percent}%`;
@@ -464,11 +503,8 @@
                 if(audio.duration) durTimeTxt.innerText = formatTime(audio.duration);
             });
 
-            // Seeking
             progCont.addEventListener('click', (e) => {
-                const width = progCont.clientWidth;
-                const clickX = e.offsetX;
-                audio.currentTime = (clickX / width) * audio.duration;
+                audio.currentTime = (e.offsetX / progCont.clientWidth) * audio.duration;
             });
         });
 
@@ -478,9 +514,10 @@
             return `${min < 10 ? '0'+min : min}:${sec < 10 ? '0'+sec : sec}`;
         }
 
-        // Animation Loader
         window.addEventListener('load', () => {
-            gsap.to("#loader", { opacity: 0, duration: 0.5, onComplete: () => { document.getElementById("loader").style.display = "none"; }});
+            gsap.to("#loader", { opacity: 0, duration: 0.5, onComplete: () => { 
+                document.getElementById("loader").style.display = "none"; 
+            }});
         });
     </script>
 </body>
